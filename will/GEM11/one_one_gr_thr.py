@@ -2,10 +2,12 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-data = pd.read_csv('/home/wtf8hu/MAIN/likos_collab/GEM/likoslab/one_one_gr/EquilDamp/oneone_thr.txt', sep =' ', skiprows = 4)
+data = pd.read_csv('/home/wtf8hu/lammps/likos_collab/will/GEM11/oneone_thr.txt', sep =' ', skiprows = 4, header=None)
 r= data.iloc[0:, 1].dropna().to_numpy()
 gr = data.iloc[0:, 2].dropna().to_numpy()
 c3 = data.iloc[0:, 3].dropna().to_numpy()
+
+print(data)
 
 plt.xlabel("r")
 plt.ylabel("g(r)")

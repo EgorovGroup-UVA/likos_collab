@@ -46,7 +46,7 @@ dump dump all atom 50 output2.lammpstrj
 # Run
 fix nve all nve
 fix langevin all langevin 1.0 1.0 0.01 345678
-timestep 0.0000005
+timestep 0.005
 compute myRDF all rdf 40 1 1 cutoff 4
 fix myfix all ave/time 5 1 10000 c_myRDF[1] c_myRDF[2] c_myRDF[3] file oneone_thr.txt mode vector
 #first column is center bin, 2nd is g(r), 3rd is r
